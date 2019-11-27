@@ -50,7 +50,7 @@ title: Hank Quinlan, Horrible Cop
 			<div class="carousel-item">
 				<svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
 					preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
-					<rect width="100%" height="100%" fill="#777" /></svg>
+					<img src="resources/img/hero2.jpeg" /></svg>
 				<div class="container">
 					<div class="carousel-caption">
 						<h1>Another example headline.</h1>
@@ -63,7 +63,7 @@ title: Hank Quinlan, Horrible Cop
 			<div class="carousel-item">
 				<svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
 					preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
-					<rect width="100%" height="100%" fill="#777" /></svg>
+					<img src="resources/img/hero3.jpeg" /></svg>
 				<div class="container">
 					<div class="carousel-caption text-right">
 						<h1>One more for good measure.</h1>
@@ -140,66 +140,28 @@ title: Hank Quinlan, Horrible Cop
 
 		<!-- START THE FEATURETTES -->
 
-		<hr class="featurette-divider">
-
-		<div class="row featurette">
-			<div class="col-md-7">
-				<h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your
-						mind.</span></h2>
-				<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
-					euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
-					tellus ac cursus commodo.</p>
+		<div class="posts">
+		
+			{% for post in site.posts %}
+			<hr class="featurette-divider">
+		
+			<div class="row featurette">
+				<div class="col-md-7">
+					<h2 class="featurette-heading">{{ post.title }}</h2>
+					<p class="lead">{{ post.excerpt }}</p>
+				</div>
+				<div class="col-md-5">
+					<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250"
+						height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+						role="img" aria-label="Placeholder: 500x500">
+						<title>Placeholder</title>
+						<rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
+							dy=".3em">500x500</text>
+					</svg>
+				</div>
 			</div>
-			<div class="col-md-5">
-				<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-					height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
-					focusable="false" role="img" aria-label="Placeholder: 500x500">
-					<title>Placeholder</title>
-					<rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-						dy=".3em">500x500</text>
-				</svg>
-			</div>
-		</div>
-
-		<hr class="featurette-divider">
-
-		<div class="row featurette">
-			<div class="col-md-7 order-md-2">
-				<h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for
-						yourself.</span></h2>
-				<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
-					euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
-					tellus ac cursus commodo.</p>
-			</div>
-			<div class="col-md-5 order-md-1">
-				<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-					height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
-					focusable="false" role="img" aria-label="Placeholder: 500x500">
-					<title>Placeholder</title>
-					<rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-						dy=".3em">500x500</text>
-				</svg>
-			</div>
-		</div>
-
-		<hr class="featurette-divider">
-
-		<div class="row featurette">
-			<div class="col-md-7">
-				<h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-				<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
-					euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
-					tellus ac cursus commodo.</p>
-			</div>
-			<div class="col-md-5">
-				<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-					height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
-					focusable="false" role="img" aria-label="Placeholder: 500x500">
-					<title>Placeholder</title>
-					<rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-						dy=".3em">500x500</text>
-				</svg>
-			</div>
+			{% endfor %}
+		
 		</div>
 
 		<hr class="featurette-divider">
@@ -207,13 +169,6 @@ title: Hank Quinlan, Horrible Cop
 		<!-- /END THE FEATURETTES -->
 
 	</div><!-- /.container -->
-
-
-	<!-- FOOTER -->
-	<footer class="container">
-		<p class="float-right"><a href="#">Back to top</a></p>
-		<p>&copy; 2017-2019 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-	</footer>
 </main>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
