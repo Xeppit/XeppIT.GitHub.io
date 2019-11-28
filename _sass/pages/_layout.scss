@@ -21,9 +21,9 @@
   color: $text-color;
   padding: 0 30px;
   .avatar {
-    border-radius: 50%;
+    // border-radius: 50%;
     width: 100px;
-    height: 100px;
+    height: Auto;
     float: none;
     @include media-query($medium-screen) {
       margin-right: 0;
@@ -31,9 +31,9 @@
   }
   .author_name {
     display: block;
-    color: #F36170;
+    color: #342800;
     font-size: 1.75em;
-    text-transform: lowercase;
+    // text-transform: lowercase;
   }
   .author_job {
     display: block;
