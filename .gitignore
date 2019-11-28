@@ -1,2 +1,7 @@
 _site
-.jekyll-cache
+.sass-cache
+.directory
+Thumbs.db
+_drafts
+.ruby-version
+Gemfile.lock
