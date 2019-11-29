@@ -2,7 +2,7 @@
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name: Zone Electrical Ltd
   link: http://www.zoneelectrical.co.uk/
-  date: 2013 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
+  date: 2016 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
   job: Electrical Project Manager
 
 - name: Hornbill
