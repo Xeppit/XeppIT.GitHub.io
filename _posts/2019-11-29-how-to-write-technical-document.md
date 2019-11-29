@@ -38,7 +38,7 @@ When writing a technical document the following points should be filled out in o
 
 ## Example of a technical document
 
-{% highlight %}
+
 ## Description
 This document is a tutorial on using github pages
 
@@ -65,7 +65,7 @@ etc.
 
 ## Whats Next
 [link](https://jekyllrb.com/)
-{% endhighlight %}
+
 
 ## References
 N/A
