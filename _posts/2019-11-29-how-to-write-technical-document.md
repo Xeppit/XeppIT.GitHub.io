@@ -2,8 +2,8 @@
 layout: post
 title: How to write technical documents
 excerpt: "A description on how to write technical documents."
-categories: [Software Design]
-tags: [Use Cases, Programming, Software Design]
+categories: [Blogging Standards]
+tags: [Technical Guide]
 modified: 2019-11-29
 comments: true
 ---
@@ -36,8 +36,8 @@ When writing a technical document the following points should be filled out in o
 | References                                        | Links to the resources used to create the body of this document                                  |
 | Read next links                                   | Links to articles related to this document                                                       |
 
-## Example of a technical document
-
+**Start Example of a technical document**
+{: .notice}
 
 ## Description
 This document is a tutorial on using github pages
@@ -66,6 +66,8 @@ etc.
 ## Whats Next
 [link](https://jekyllrb.com/)
 
+**End Example of a technical document**
+{: .notice}
 
 ## References
 N/A
