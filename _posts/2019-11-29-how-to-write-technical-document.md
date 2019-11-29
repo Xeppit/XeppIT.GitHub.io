@@ -13,7 +13,7 @@ This document will describe the proceadure for writing a technical document for 
 
 ## Problems/Reason for document
 * Having no structure to my posts make them very inconsistant.
-* When there is no structure to follow they generaly end up just a blob of information.
+* When there is no structure to follow posts generaly end up as just a blob of incomplete information that is difficult to follow.
 * With no set goals motivation to complete the post is low.
 
 ## Goals
