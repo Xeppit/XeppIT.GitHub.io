@@ -9,7 +9,7 @@ comments: true
 ---
 
 ## Description
-This document will describe the proceadure of writing a technical document for my blog.
+This document will describe the proceadure for writing a technical document for my blog.
 
 ## Problems/Reason for document
 * Having no structure to my posts make them very inconsistant.
@@ -17,7 +17,8 @@ This document will describe the proceadure of writing a technical document for m
 * With no set goals motivation to complete the post is low.
 
 ## Goals
-All future posts to follow the same format.
+* All future posts to follow the same format.
+* More precise & targeted documentation
 
 ## Prequisites
 * Access to github pages
@@ -29,7 +30,7 @@ When writing a technical document the following points should be filled out in o
 | Section                                           | Details                                                                                          |
 |---------------------------------------------------|--------------------------------------------------------------------------------------------------|
 | Description/Purpose                               | A summary of the whole document                                                                  |
-| Problems/Purpose                                  | Bullet point list of problems that this can solve                                                |
+| Problems                                          | Bullet point list of problems that this can solve                                                |
 | Goals                                             | Bullet point list of the goals for this document                                                 |
 | Perequisites                                      | Bullet point list of Prerequisites                                                               |
 | Body of document                                  | This will be built of sections using h2 headings                                                 |
