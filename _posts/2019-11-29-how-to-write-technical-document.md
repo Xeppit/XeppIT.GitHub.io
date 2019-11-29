@@ -62,10 +62,10 @@ etc.
 etc.
 
 ## References
-[lisdddddnk](https://pages.github.com/)
+[GitHub Pages](https://pages.github.com/)
 
 ## Whats Next
-[link](https://jekyllrb.com/)
+[Jekyll](https://jekyllrb.com/)
 
 **End Example of a technical document**
 {: .notice}
