@@ -3,7 +3,7 @@
 # Site wide configuration
 ####################################
 #
-title: XeppIT-NjkWales Blog
+title: NjkWales Blog
 email: Nathan@XeppIT.co.uk
 description: A simple place to keep my thoughts and idea's.
 url: https://xeppit.co.uk/
@@ -33,7 +33,7 @@ kramdown:
 ####################################
 #
 owner:
-  name: Nathan
+  name: Nathan Wilson
   avatar: logo.png
   job: "Electrician / Project Manager / Software enthusiast"
   bio: "A simple place to keep my thoughts and idea's."
