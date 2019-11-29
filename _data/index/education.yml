@@ -1,8 +1,46 @@
-- name: Massachusets Instutite of Technology
-  link: http://web.mit.edu/
-  date: 2011 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
+- name: Udemy - Build an app with ASP.NET Core and Angular from scratch
+  link: https://www.udemy.com/course/build-an-app-with-aspnet-core-and-angular-from-scratch/
+  date: 2019 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
   descr: <br> (expected graduation in 2019)
 
-- name: Harvard
-  link: http://www.harvard.edu/
-  date: 2007 - 2011
+- name: Udemy - Build Responsive Real World Websites with HTML5 and CSS3
+  link: https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/
+  date: 2019 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
+  descr: <br> (expected graduation in 2019)
+
+- name: SWET - C&G 2396 Design and Verification
+  link: https://swet.org.uk/
+  date: 2018 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
+  descr: <br> (expected graduation in 2020)
+
+- name: Control 2k - 18th Edition  Requirements
+  link: https://www.control2k.co.uk/
+  date: 2018
+
+- name: CITB - Site Supervisors' Safety Training Scheme
+  link: https://www.citb.co.uk/national-construction-college/health-and-safety-courses/site-supervisors-safety-training-scheme-sssts/
+  date: 2018
+
+- name: Crownford Training - IOSH Managing Safely
+  link: https://www.crownford.co.uk/
+  date: 2015
+
+- name: Crownford Training - ISO Internal Auditing
+  link: https://www.crownford.co.uk/
+  date: 2014
+
+- name: NPT College (Afan) - C&G 2391 Inspection & Testing
+  link: https://www.nptcgroup.ac.uk/
+  date: 2012
+
+- name: NPT College (Afan) - 17th Edition Requirements
+  link: https://www.nptcgroup.ac.uk/
+  date: 2008
+
+- name: NPT College (Afan) - Apprenticeship Electrical Installation & 16th Edition Requirements
+  link: https://www.nptcgroup.ac.uk/
+  date: 2003 - 2007
+
+- name: NPT College (Neath) - Electrical Installation
+  link: https://www.nptcgroup.ac.uk/
+  date: 2000 - 2003
