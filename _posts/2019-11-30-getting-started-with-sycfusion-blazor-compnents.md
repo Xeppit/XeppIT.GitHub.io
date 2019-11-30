@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting started with syncfusion's blazor components
+excerpt: "In this post we will be looking at how to get a fresh .Net core Blazor, serverside app with syncfusions component library installed."
 categories: [Programing]
 tags: [Syncfusion, Blazor, ASP.net, Setup]
 modified: 2019-11-29
@@ -33,21 +34,22 @@ In this post we will be looking at how to get a fresh .Net core Blazor, serversi
 ## Syncfusion Blazor Component Library
 * In VS Code using nuget install `Syncfusion.EJ2.Blazor` package.
 * Open `~/_Imports.razor` file and import the `Syncfusion.EJ2.Blazor` by adding the following.
+
 ```csharp
 @using Syncfusion.EJ2.Blazor
 @using Syncfusion.EJ2.Blazor.Calendars
 ```
 * Add the client-side resources through CDN in the `<head>` element of the `~/Pages/_Host.cshtml` page.
+
 ```html
 <head>
-    ....
-    ....
     <link href="https://cdn.syncfusion.com/ej2/17.3.29/material.css" rel="stylesheet" />
     <script src="https://cdn.syncfusion.com/ej2/17.3.29/dist/ej2.min.js"></script>
     <script src="https://cdn.syncfusion.com/ej2/17.3.29/dist/ejs.interop.min.js"></script>
 </head>
 ```
 * Now, add the Syncfusion Blazor components in any web page (razor) in the `~/Pages` folder. For example, the calendar component is added in the `~/Pages/Index.razor` page.
+
 ```html
 <EjsCalendar></EjsCalendar>
 ```
