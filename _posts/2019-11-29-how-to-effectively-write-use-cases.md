@@ -58,6 +58,9 @@ How important this use case is on a scale 1 - 10
 ##### Difficulty
 How difficult this use case is on a scale 1 - 10
 
+##### Work
+This is the product of Priority x Difficulty
+
 ##### Preconditions
 What is needed before the use case is executed.
 
@@ -92,6 +95,9 @@ When I get hungry I go to the bake bean cupboard and get a can of bake beans, I 
 
 **Difficulty** :
 5
+
+**Work** :
+25
 
 **Preconditions** :-
 * Baked Beans
