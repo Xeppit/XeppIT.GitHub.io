@@ -37,40 +37,36 @@ When writing a tutorial blog post, the following points shall be addressed in or
 | References                                        | Links to the resources used to create the body of this document                                  |
 | Read next links                                   | Links to articles related to this document                                                       |
 
-**Start Example of a technical document**
-{: .notice}
+## Example
 
-## Description
+### Description
 This document is a tutorial on using GitHub Pages
 
-## Problems/Purpose
-Paying for web hosting
+### Problems/Purpose
+* Paying for web hosting
 
-## Goals
+### Goals
 * Create a GitHub account.
 * Create a GitHub repository.
 * Host a website on GitHub Pages.
 
-## Perquisites
+### Perquisites
 Computer Win/Mac/Linux
 Web Browser
 Internet Access
 
-## Create a GitHub Account
+### Create a GitHub Account
 Using the browser, navigate to www.github.com.
 Click on create an account and fill in your details.
 etc.
 etc.
 etc.
 
-## References
-[GitHub Pages](https://pages.github.com/)
+### References
+* [GitHub Pages](https://pages.github.com/)
 
-## What's Next
-[Jekyll](https://jekyllrb.com/)
-
-**End Example of a technical document**
-{: .notice}
+### What's Next
+* [Jekyll](https://jekyllrb.com/)
 
 ## References
 N/A
