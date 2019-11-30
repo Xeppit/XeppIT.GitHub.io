@@ -1,39 +1,39 @@
 ---
 layout: post
-title: How to write technical documents
+title: How to write tutorial blog post
 excerpt: "A description on how to write technical documents."
 categories: [Blogging Standards]
-tags: [Technical Guide]
+tags: [Post Template]
 modified: 2019-11-29
 comments: true
 ---
 
 ## Description
-This document will describe the proceadure for writing a technical document for my blog.
+This document will describe the procedure for writing a tutorial blog post.
 
 ## Problems/Reason for document
-* Having no structure to my posts make them very inconsistant.
-* When there is no structure to follow posts generaly end up as just a blob of incomplete information that is difficult to follow.
-* With no set goals motivation to complete the post is low.
+* Having no structure to my posts makes them very inconsistent.
+* When there is no structure to follow posts generally end up as just a blob of incomplete information that is difficult to follow.
+* With no set goals, motivation to complete the post is low.
 
 ## Goals
-* All future posts to follow the same format.
-* More precise & targeted documentation
+* All future tutorial blog posts to follow the same format.
+* More precise & targeted documentation.
 
-## Prequisites
-* Access to github pages
-* jekyll site setup
+## Perquisites
+* Access to GitHub pages
+* Jekyll site setup
 
-## How to a write technical document
-When writing a technical document the following points should be filled out in order.
+## How to write a tutorial blog post
+When writing a tutorial blog post, the following points shall be addressed in order.
 
 | Section                                           | Details                                                                                          |
 |---------------------------------------------------|--------------------------------------------------------------------------------------------------|
 | Description/Purpose                               | A summary of the whole document                                                                  |
 | Problems                                          | Bullet point list of problems that this can solve                                                |
 | Goals                                             | Bullet point list of the goals for this document                                                 |
-| Perequisites                                      | Bullet point list of Prerequisites                                                               |
-| Body of document                                  | This will be built of sections using h2 headings                                                 |
+| Perquisites                                       | Bullet point list of Prerequisites                                                               |
+| Body of document                                  | This Section will be built of steps using the h2 heading                                         |
 | References                                        | Links to the resources used to create the body of this document                                  |
 | Read next links                                   | Links to articles related to this document                                                       |
 
@@ -41,22 +41,24 @@ When writing a technical document the following points should be filled out in o
 {: .notice}
 
 ## Description
-This document is a tutorial on using github pages
+This document is a tutorial on using GitHub Pages
 
 ## Problems/Purpose
 Paying for web hosting
 
 ## Goals
-What do you want the people reading this document to do after reading it? Is it to use a certain software? Discover reports rapidly and effectively? Figure out how to utilize certain parts of your software? Setting clear goals is fundamental to composing great specialized documentation.
+* Create a GitHub account.
+* Create a GitHub repository.
+* Host a website on GitHub Pages.
 
-## Perequisites
+## Perquisites
 Computer Win/Mac/Linux
 Web Browser
 Internet Access
 
 ## Create a GitHub Account
-Using browser navigate to www.github.com.
-Click create account and fill in your details.
+Using the browser, navigate to www.github.com.
+Click on create an account and fill in your details.
 etc.
 etc.
 etc.
@@ -64,7 +66,7 @@ etc.
 ## References
 [GitHub Pages](https://pages.github.com/)
 
-## Whats Next
+## What's Next
 [Jekyll](https://jekyllrb.com/)
 
 **End Example of a technical document**
@@ -73,5 +75,5 @@ etc.
 ## References
 N/A
 
-## Whats Next
+## What's Next
 N/A
