@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with syncfusion's blazor components
 excerpt: "In this post we will be looking at how to get a fresh .Net core Blazor, serverside app with syncfusions component library installed."
-categories: [Programing]
+categories: [Programming]
 tags: [Syncfusion, Blazor, ASP.net, Setup]
 modified: 2019-11-29
 comments: true
