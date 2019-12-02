@@ -23,9 +23,11 @@ How to create a .net core WebApi with swagger.
 * VS Code
 * .Net Core 3.1 SDK
 
-## Creating the Project
+[Github Repo](https://github.com/Xeppit/Education.WebApiWithSwagger/)
 
-In a vscode terminal navigate to the directory you want to creat the project in and run the command
+## Creating the Project & Adding Swagger
+
+In a vscode terminal navigate to the directory you want to create the project in and run the command
 
     dotnet new webapi
 
@@ -100,11 +102,11 @@ app.UseSwaggerUI(c =>
 
 If using directories with IIS or a reverse proxy, set the Swagger endpoint to a relative path using the  `./`  prefix. For example,  `./swagger/v1/swagger.json`. Using  `/swagger/v1/swagger.json`  instructs the app to look for the JSON file at the true root of the URL (plus the route prefix, if used). For example, use  `http://localhost:<port>/<route_prefix>/swagger/v1/swagger.json`  instead of  `http://localhost:<port>/<virtual_directory>/<route_prefix>/swagger/v1/swagger.json`.
 
+
 ## References
 
 *  [Microsoft Official](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.0&tabs=visual-studio-code)
 
-  
 
 ## What's Next
 
