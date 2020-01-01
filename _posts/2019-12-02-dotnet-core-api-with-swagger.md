@@ -42,7 +42,7 @@ using Microsoft.OpenApi.Models;
 ```
 
 Add the Swagger generator to the services collection in the  `Startup.ConfigureServices`  method:
-C#Copy
+
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -57,7 +57,7 @@ services.AddSwaggerGen(c =>
 
 In the  `Startup.Configure`  method, enable the middleware for serving the generated JSON document and the Swagger UI:
 
-C#Copy
+
 
 ```csharp
 public void Configure(IApplicationBuilder app)
