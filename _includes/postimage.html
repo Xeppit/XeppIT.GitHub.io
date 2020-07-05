@@ -1,3 +1,18 @@
-<a target="_blank" href="{{ site.url }}/post-images/{{ include.postname }}/{{ include.imageName }}">
-    <img class="post-image" src="{{ site.url }}/post-images/{{ include.postname }}/{{ include.imageName }}" alt="{{ include.imageName }}">
+{% if include.caption %}
+<figure>
+    <a target="_blank"
+        href="{{ site.url }}/post-images/{{ include.postname }}/{{ include.postname }}-{{ include.imageName }}">
+        <img class="post-image"
+            src="{{ site.url }}/post-images/{{ include.postname }}/{{ include.postname }}-{{ include.imageName }}"
+            alt="{{ include.imageName }}">
+    </a>
+    <figcaption>{{ include.caption }}</figcaption>
+</figure>
+{% else %}
+<a target="_blank"
+    href="{{ site.url }}/post-images/{{ include.postname }}/{{ include.postname }}-{{ include.imageName }}">
+    <img class="post-image"
+        src="{{ site.url }}/post-images/{{ include.postname }}/{{ include.postname }}-{{ include.imageName }}"
+        alt="{{ include.imageName }}">
 </a>
+{% endif %}
