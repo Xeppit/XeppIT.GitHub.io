@@ -243,3 +243,10 @@ caption="In the body request add the key/values shown" %}
 postname=post_identifier
 imageName="13-3.png" 
 caption="Send the request and if all went well you will receive a token back" %}
+
+### 
+### 
+### 
+### 
+### 
+### 
