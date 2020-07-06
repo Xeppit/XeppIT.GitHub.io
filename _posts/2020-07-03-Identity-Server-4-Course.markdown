@@ -156,3 +156,90 @@ postname=post_identifier
 imageName="7-5.png" 
 caption="A DELETE request to the URL + an Id will delete a record" %}
 
+### Create Identity Server Project
+
+{% include postimage.html 
+postname=post_identifier
+imageName="8-1.png" 
+caption="Add a new project as per usual" %}
+
+{% include postimage.html 
+postname=post_identifier
+imageName="8-2.png" 
+caption="" %}
+
+{% include postimage.html 
+postname=post_identifier
+imageName="8-3.png" 
+caption="" %}
+
+{% include postimage.html 
+postname=post_identifier
+imageName="8-4.png" 
+caption="These are the default settings" %}
+
+{% include postimage.html 
+postname=post_identifier
+imageName="8-5.png" 
+caption="Change to these settings. Setting that have changes are Profile, Launch, Launch browser & the App URL ports(so they dont conflict with the API port settings)" %}
+
+{% include postimage.html 
+postname=post_identifier
+imageName="8-6.png" 
+caption="Run the App make sure there are no exceptions thrown" %}
+
+### Install Identity Server Packages
+
+{% include postimage.html 
+postname=post_identifier
+imageName="9-1.png" 
+caption="Using the nuget manager add the package IdentityServer4 to Rolodex.IdentityServer Project" %}
+
+### Define Clients and Resources
+
+{% include postimage.html 
+postname=post_identifier
+imageName="10-1.png" 
+caption="Add a new class called config" %}
+
+{% include postimage.html 
+postname=post_identifier
+imageName="10-2.png" 
+caption="Here we are adding the Scopes(The Available Api's) and the clients(The Users)" %}
+
+This seems to have been updated further investigation needed stack link below
+```https://stackoverflow.com/questions/62521583/constantly-get-invalid-scope-error-after-udating-my-identityserver4```
+
+### Configure Identity Server Start up
+
+{% include postimage.html 
+postname=post_identifier
+imageName="11-1.png" 
+caption="Add the identity server service to the Services(Dependency Injection) in ConfigurationServices method. In the Configure method remove the commented out text show and add app.UseIdentityServer(); " %}
+
+### Launch & Discover Identity Server
+
+{% include postimage.html 
+postname=post_identifier
+imageName="12-1.png" 
+caption="Launch a webbrowser and navigate to the address below using your URL & Port number" %}
+```https://localhost:5003/.well-known/openid-configuration```
+
+### Request Token Using Postman
+
+{% include postimage.html 
+postname=post_identifier
+imageName="13-1.png" 
+caption="Create a new postman POST with a url taken from token_endpoint from the previous step (yours not mine). On the Authorization tab select Basic Auth from the drop down and enter the client and secret we created in the Define Client Resources section" %}
+```https://localhost:5003/connect/token```
+
+
+{% include postimage.html 
+postname=post_identifier
+imageName="13-2.png" 
+caption="In the body request add the key/values shown" %}
+
+{% include postimage.html 
+postname=post_identifier
+imageName="13-3.png" 
+caption="Send the request and if all went well you will receive a token back" %}
