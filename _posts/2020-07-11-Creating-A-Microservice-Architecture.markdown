@@ -1,8 +1,8 @@
 ---
 layout: post
-post_identifier: 2020-07-03-Identity-Server-4-Course
-title:  "Securing .Net API's Using Idendity Server 4"
-date:   2020-07-04 16:02:24 +0100
+post_identifier: 2020-07-11-Creating-A-Microservice-Architecture
+title:  "Creating A Microservice Architecture"
+date:   2020-07-09 16:02:24 +0100
 categories: Tutorial
 excerpt: loremNostrud est anim Lorem ea pariatur anim consequat sunt laborum pariatur et et
 ---
@@ -26,6 +26,11 @@ Get Started with .NET Core Identity Server and Securing your Applications!
 * Webbrowser Extention "JSON Formatter"
 
 ## Creating Project Structure
+
+{% include postimage.html 
+postname=post_identifier
+imageName="1-1.png" 
+caption="Project Structure" %}
 
 ### Using the console create the project structure
 ```
