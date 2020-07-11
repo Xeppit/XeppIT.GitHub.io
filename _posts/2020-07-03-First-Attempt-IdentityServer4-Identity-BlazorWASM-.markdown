@@ -385,3 +385,91 @@ public static async Task Main(string[] args)
     }
 }
 ```
+
+## Adding Cutsom Claims
+
+### FirstAttempt.IdentityServer/Config.cs
+```csharp
+public static IEnumerable<IdentityResource> IdentityResources =>
+    new IdentityResource[]
+    {
+        new IdentityResources.OpenId(),
+        //new IdentityResources.Profile(),
+        //overridden below
+        new CustomIdentityResourcesProfile(),
+        new IdentityResources.Email(),
+        
+    };
+```
+
+### FirstAttempt.IdentityServer/CustomIdentityResourceRoleClaim.cs
+```csharp
+using IdentityModel;
+using IdentityServer4.Models;
+
+namespace FirstAttempt.IdentityServer
+{
+    public class CustomIdentityResourcesProfile : IdentityResources.Profile
+    {
+        public CustomIdentityResourcesProfile()
+        {
+            this.UserClaims.Add(JwtClaimTypes.Role);
+        }
+    }
+}
+```
+
+### FirstAttempt.IdentityServer/SeedData.cs
+The database need to be re-seeded after this modification
+```csharp
+if (alice == null)
+{
+    alice = new ApplicationUser
+    {
+        UserName = "alice",
+        Email = "AliceSmith@email.com",
+        EmailConfirmed = true,
+    };
+    var result = userMgr.CreateAsync(alice, "Pass123$").Result;
+    if (!result.Succeeded)
+    {
+        throw new Exception(result.Errors.First().Description);
+    }
+    result = userMgr.AddClaimsAsync(alice, new Claim[]{
+        new Claim(JwtClaimTypes.Name, "Alice Smith"),
+        new Claim(JwtClaimTypes.GivenName, "Alice"),
+        new Claim(JwtClaimTypes.FamilyName, "Smith"),
+        new Claim(JwtClaimTypes.WebSite, "http://alice.com"),
+        new Claim(JwtClaimTypes.Role, "User"),
+        new Claim(JwtClaimTypes.Role, "Admin")
+    }).Result;
+    if (!result.Succeeded)
+    {
+        throw new Exception(result.Errors.First().Description);
+    }
+    Log.Debug("alice created");
+}
+else
+{
+    Log.Debug("alice already exists");
+}
+```
+
+### FirstAttempt.Blazor/program.cs
+```csharp
+builder.Services.AddOidcAuthentication(options =>
+{
+    builder.Configuration.Bind("oidc", options.ProviderOptions);
+    options.UserOptions.RoleClaim = "role";
+});
+```
+
+### FirstAttempt.Blazor/Pages/FetchData.razor
+```csharp
+<AuthorizeView Roles="Admin">
+    <Authorized>
+        You can only see this if you're an admin or superuser.
+    </Authorized>
+
+</AuthorizeView>
+```
