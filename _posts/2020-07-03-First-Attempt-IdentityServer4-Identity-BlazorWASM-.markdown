@@ -16,11 +16,12 @@ First attempt at trying to integrate Blazor Web Assembly, .Net Core Identity, Id
 ## References
 * [Marco De Sanctis, Securing Blazor WebAssembly with Identity Server 4 (updated to Preview 5)](https://medium.com/@marcodesanctis2/securing-blazor-webassembly-with-identity-server-4-ee44aa1687ef)
 
+## Github Repo
+* [FirstAttempt)](https://github.com/Xeppit/FirstAttempt)
+
 ## Goals
-* Create solution
-* Create IdentityServer4 project
-* Create WebApi with an authorized controller
-* Use blazor site to get token and user info from itentity server and use that to access the protected API
+Create three projects, IdentityServer, Blazor Webassembely, .NetCore WebApi.
+Configure all three so that you can login using the blazor project and access the protected Api using the logged in user.
 
 ## Creating Project Structure
 
@@ -384,9 +385,3 @@ public static async Task Main(string[] args)
     }
 }
 ```
-
-
-{% include postimage.html 
-postname=post_identifier
-imageName="1-1.png" 
-caption="Create a blank solution" %}
