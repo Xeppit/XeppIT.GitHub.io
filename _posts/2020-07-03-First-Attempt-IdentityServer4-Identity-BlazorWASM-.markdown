@@ -397,8 +397,15 @@ public static IEnumerable<IdentityResource> IdentityResources =>
         //new IdentityResources.Profile(),
         //overridden below
         new CustomIdentityResourcesProfile(),
-        new IdentityResources.Email(),
-        
+        new IdentityResources.Email(),       
+    };
+```
+
+```csharp
+public static IEnumerable<ApiScope> ApiScopes =>
+    new ApiScope[]
+    {
+        new ApiScope("testapi", new[] { JwtClaimTypes.Role }),
     };
 ```
 
