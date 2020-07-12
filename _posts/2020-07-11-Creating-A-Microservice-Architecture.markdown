@@ -208,7 +208,6 @@ public static IEnumerable<ApiScope> ApiScopes =>
     };
 ```
 
-### MicroserviceArchitecture.IdentityServer/Config.cs
 ```csharp
 public static IEnumerable<Client> Clients =>
     // New Client
@@ -445,7 +444,8 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
     app.UseHttpsRedirection();
     app.UseRouting();
-    app.UseAuthentication(); // New Line
+    // New Line
+    app.UseAuthentication();
     app.UseAuthorization();
     app.UseEndpoints(endpoints =>
     {
@@ -456,7 +456,216 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 ### MicroserviceArchitecture.GatewayApi/Controllers/WeatherForecastController.cs
 ```csharp
-[Authorize]                                                                     //New Line
+//New Line
+[Authorize]
 [ApiController]
 [Route("[controller]")]
 ```
+
+## Confiuring the Microservices
+### MicroserviceArchitecture.IdentityServer/Config.cs
+
+```csharp
+public static IEnumerable<Client> Clients =>
+    new Client[]
+    {
+        new Client
+        {
+            ClientId = "blazor",
+            AllowedGrantTypes = GrantTypes.Code,
+            AllowedCorsOrigins = {"https://localhost:5001"},
+            RequirePkce = true,
+            RequireClientSecret = false,
+            RedirectUris = {"https://localhost:5001/authentication/login-callback"},
+            PostLogoutRedirectUris = {"https://localhost:5001/"},
+            AllowedScopes = {"openid", "profile", "email", "gatewayapi"}
+        },
+        // Add New Client
+        new Client
+        {
+            ClientId = "gateway",
+            AllowedGrantTypes = GrantTypes.ClientCredentials,
+            ClientSecrets =
+            {
+                new Secret("secret".Sha256())
+            },
+            AllowedScopes = {"microserviceapi1", "microserviceapi2", "microserviceapi3",}
+        }
+    };
+```
+
+### MicroserviceArchitecture.MicroServiceApi1/Startup.cs
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddControllers();
+
+    // New
+    services.AddAuthentication("Bearer")
+        .AddJwtBearer("Bearer", options =>
+        {
+            options.Authority = "https://localhost:5000";
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateAudience = false
+            };
+        });
+}
+```
+
+```csharp
+ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+ {
+     if (env.IsDevelopment())
+     {
+         app.UseDeveloperExceptionPage();
+     }
+     
+     // New
+     app.UseCors(config =>
+     {
+         config.AllowAnyOrigin();
+         config.AllowAnyMethod();
+         config.AllowAnyHeader();
+     });
+
+     app.UseHttpsRedirection();
+
+     app.UseRouting();
+     
+     // New Line
+     app.UseAuthentication();
+
+     app.UseAuthorization();
+
+     app.UseEndpoints(endpoints =>
+     {
+         endpoints.MapControllers();
+     });
+ }
+```
+
+### MicroserviceArchitecture.MicroServiceApi1.Controllers/WeatherForecastController.cs
+```csharp
+[Authorize]
+[ApiController]
+[Route("[controller]")]
+```
+
+### MicroserviceArchitecture.MicroServiceApi2/Startup.cs
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddControllers();
+
+    // New
+    services.AddAuthentication("Bearer")
+        .AddJwtBearer("Bearer", options =>
+        {
+            options.Authority = "https://localhost:5000";
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateAudience = false
+            };
+        });
+}
+```
+
+```csharp
+ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+ {
+     if (env.IsDevelopment())
+     {
+         app.UseDeveloperExceptionPage();
+     }
+
+     app.UseCors(config =>
+     {
+         config.AllowAnyOrigin();
+         config.AllowAnyMethod();
+         config.AllowAnyHeader();
+     });
+
+     app.UseHttpsRedirection();
+
+     app.UseRouting();
+     
+     // New Line
+     app.UseAuthentication();
+
+     app.UseAuthorization();
+
+     app.UseEndpoints(endpoints =>
+     {
+         endpoints.MapControllers();
+     });
+ }
+```
+
+### MicroserviceArchitecture.MicroServiceApi2.Controllers/WeatherForecastController.cs
+```csharp
+[Authorize]
+[ApiController]
+[Route("[controller]")]
+```
+
+### MicroserviceArchitecture.MicroServiceApi3/Startup.cs
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddControllers();
+
+    // New
+    services.AddAuthentication("Bearer")
+        .AddJwtBearer("Bearer", options =>
+        {
+            options.Authority = "https://localhost:5000";
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateAudience = false
+            };
+        });
+}
+```
+
+```csharp
+ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+ {
+     if (env.IsDevelopment())
+     {
+         app.UseDeveloperExceptionPage();
+     }
+
+     app.UseCors(config =>
+     {
+         config.AllowAnyOrigin();
+         config.AllowAnyMethod();
+         config.AllowAnyHeader();
+     });
+
+     app.UseHttpsRedirection();
+
+     app.UseRouting();
+     
+     // New Line
+     app.UseAuthentication();
+
+     app.UseAuthorization();
+
+     app.UseEndpoints(endpoints =>
+     {
+         endpoints.MapControllers();
+     });
+ }
+```
+
+### MicroserviceArchitecture.MicroServiceApi3.Controllers/WeatherForecastController.cs
+```csharp
+[Authorize]
+[ApiController]
+[Route("[controller]")]
+```
+Add Identity Model to nuget
+### Add httpclientfactory to services
+### Create Token Service in api gateway
+### create controller in gateway to get data from microservice and return to client
