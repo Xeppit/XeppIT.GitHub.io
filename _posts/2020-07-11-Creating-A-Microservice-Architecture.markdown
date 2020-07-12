@@ -225,7 +225,7 @@ public static IEnumerable<Client> Clients =>
             RedirectUris = {"https://localhost:5001/authentication/login-callback"},
             PostLogoutRedirectUris = {"https://localhost:5001/"},
             AllowedScopes = {"openid", "profile", "email", "gatewayapi"}
-        },
+        }
     };
 ```
 
@@ -312,8 +312,8 @@ public static async Task Main(string[] args)
         {                                                               // New Line
             var handler = sp.GetService<AuthorizationMessageHandler>()  // New Line
                 .ConfigureHandler(                                      // New Line
-                    authorizedUrls: new[] { "https://localhost:5004" }, // New Line
-                    scopes: new[] { "testapi" });                       // New Line
+                    authorizedUrls: new[] { "https://localhost:5002" }, // New Line
+                    scopes: new[] { "gatewayapi" });                       // New Line
             return handler;                                             // New Line
         });                                                             // New Line
 
