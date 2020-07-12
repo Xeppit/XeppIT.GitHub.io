@@ -144,7 +144,7 @@ public static IEnumerable<Client> Clients =>
     };
 ```
 
-### FirstAttempt.Blazor/Quickstart/Account/AccountOptions.cs
+### FirstAttempt.IdentityServer/Quickstart/Account/AccountOptions.cs
 ```csharp
 public static bool ShowLogoutPrompt = false;
 public static bool AutomaticRedirectAfterSignOut = true;
