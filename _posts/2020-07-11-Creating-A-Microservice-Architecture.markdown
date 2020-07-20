@@ -665,7 +665,3 @@ public void ConfigureServices(IServiceCollection services)
 [ApiController]
 [Route("[controller]")]
 ```
-Add Identity Model to nuget
-### Add httpclientfactory to services
-### Create Token Service in api gateway
-### create controller in gateway to get data from microservice and return to client
